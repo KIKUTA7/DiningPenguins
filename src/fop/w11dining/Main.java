@@ -10,22 +10,22 @@ public class Main {
         Penguin pam = new Penguin("pam", table);
         Penguin paula = new Penguin("paula", table);
 
-        Thread petersCustomerThread = new Thread(peter);
-        Thread paulsCustomerThread = new Thread(paul);
-        Thread pamsCustomerThread = new Thread(pam);
-        Thread paulasCustomerThread = new Thread(paula);
+        Thread petersThread = new Thread(peter);
+        Thread paulsThread = new Thread(paul);
+        Thread pamsThread = new Thread(pam);
+        Thread paulasThread = new Thread(paula);
         
-        petersCustomerThread.start();
-        paulsCustomerThread.start();
-        pamsCustomerThread.start();
-        paulasCustomerThread.start();
+        petersThread.start();
+        paulsThread.start();
+        pamsThread.start();
+        paulasThread.start();
 
 
         try {
-            petersCustomerThread.join();
-            paulsCustomerThread.join();
-            pamsCustomerThread.join();
-            paulasCustomerThread.join();
+            petersThread.join();
+            paulsThread.join();
+            pamsThread.join();
+            paulasThread.join();
         } catch (InterruptedException e) {
             System.out.println("Something went wrong. Interrupted!");
             return;
